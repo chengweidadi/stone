@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉石鉴赏</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* 黑色背景 */
+            color: #fff; /* 白色文字 */
+        }
+
+        /* 顶部导航栏 */
+        nav {
+            background-color: #222;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(255, 215, 0, 0.5);
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffd700; /* 金色文字 */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        /* 内容区域 */
+        .content-wrapper {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #222;
+            border-radius: 8px;
+            margin: 20px;
+            padding: 15px;
+            width: 45%; /* 控制卡片宽度 */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            border: 1px solid #ffd700;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+            color: #ffd700; /* 金色标题 */
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #bbb;
+        }
+
+        /* 页脚 */
+        .footer {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="content.html">玉石鉴赏</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <!-- 内容区域 -->
+    <div class="content-wrapper">
+        <!-- 玉石1 -->
+        <div class="card">
+            <img src="jade1.jpg" alt="翡翠瓶">
+            <h3>翡翠瓶</h3>
+            <p>色泽浓郁，雕刻精致，表现了翡翠的质感与美感。</p>
+        </div>
+
+        <!-- 玉石2 -->
+        <div class="card">
+            <img src="jade2.jpg" alt="龙纹玉蟾">
+            <h3>龙纹玉蟾</h3>
+            <p>细腻的雕工，栩栩如生，龙纹与蟾蜍的完美结合，展现了玉石的灵性。</p>
+        </div>
+
+        <!-- 玉石3 -->
+        <div class="card">
+            <img src="jade3.jpg" alt="黄龙玉石">
+            <h3>黄龙玉石</h3>
+            <p>独特的天然纹理与色彩，仿佛一幅山水画，独具一格。</p>
+        </div>
+
+        <!-- 玉石4 -->
+        <div class="card">
+            <img src="jade4.jpg" alt="羊脂白玉">
+            <h3>羊脂白玉</h3>
+            <p>温润如脂，质地细腻，散发出高贵的光泽，是收藏家的首选。</p>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2024 玉石鉴赏与定价网站</p>
+    </footer>
+</body>
+</html>

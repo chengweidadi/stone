@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉石鉴赏与定价</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* 黑色背景 */
+            color: #fff; /* 白色文字 */
+        }
+
+        /* 顶部导航栏 */
+        nav {
+            background-color: #222;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(255, 215, 0, 0.5);
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffd700; /* 金色文字 */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        /* 主体内容 */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            background-image: url('https://via.placeholder.com/1600x900'); /* 替换为玉石相关背景 */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* 黑色透明叠加层 */
+        }
+
+        .hero-content {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #ffd700; /* 金色文字 */
+        }
+
+        .hero-content p {
+            margin: 10px 0 20px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #ffd700; /* 金色按钮 */
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* 页脚 */
+        .footer {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="content.html">玉石鉴赏</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <!-- 首页主体 -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>高端玉石鉴赏与定价</h1>
+            <p>感受玉石的美，探寻玉的真谛</p>
+            <a href="content.html" class="cta-button">立即开始</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2024 玉石鉴赏与定价网站</p>
+    </footer>
+</body>
+</html>
