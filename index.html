@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>玉石鉴赏与定价</title>
+    <title>玉石鉴赏与定价 - 登录</title>
     <style>
         /* 全局样式 */
         body {
@@ -48,60 +48,51 @@
             color: #fff;
         }
 
-	/* 主体内容 */
-	.hero-section {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 80vh;
- 	background-image: url('background.jpg'); /* 替换为您的背景图片名称 */
-        background-size: cover;
-        background-position: center;
-        position: relative;
- 	}
-
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6); /* 黑色透明叠加层 */
+        /* 登录表单样式 */
+        .login-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
         }
 
-        .hero-content {
-            position: relative;
+        .login-form {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
             text-align: center;
-            z-index: 1;
         }
 
-        .hero-content h1 {
-            font-size: 3em;
-            margin: 0;
-            color: #ffd700; /* 金色文字 */
+        .login-form h2 {
+            color: #ffd700;
+            margin-bottom: 20px;
         }
 
-        .hero-content p {
-            margin: 10px 0 20px;
-            font-size: 1.2em;
-            color: #fff;
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
         }
 
-        .cta-button {
-            padding: 15px 30px;
-            background-color: #ffd700; /* 金色按钮 */
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffd700;
+            border: none;
             color: #000;
-            text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            cursor: pointer;
         }
 
-        .cta-button:hover {
+        .login-form button:hover {
             background-color: #fff;
-            color: #000;
         }
 
         /* 页脚 */
@@ -123,18 +114,40 @@
         </ul>
     </nav>
 
-    <!-- 首页主体 -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>高端玉石鉴赏与定价</h1>
-            <p>感受玉石的美，探寻玉的真谛</p>
-            <a href="content.html" class="cta-button">立即开始</a>
+    <!-- 登录页面 -->
+    <div class="login-container">
+        <div class="login-form">
+            <h2>登录</h2>
+            <form onsubmit="return validateLogin()">
+                <input type="text" id="username" placeholder="用户名" required>
+                <input type="password" id="password" placeholder="密码" required>
+                <button type="submit">登录</button>
+            </form>
+            <p id="error-message" style="color: red;"></p>
         </div>
-    </section>
+    </div>
 
     <!-- 页脚 -->
     <footer class="footer">
         <p>&copy; 2024 玉石鉴赏与定价网站</p>
     </footer>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // 只允许admin登录，并设定一个示例密码
+            if (username === 'admin' && password === '123456') {
+                // 登录成功，重定向到内容页面
+                window.location.href = 'content.html';
+                return false;
+            } else {
+                errorMessage.textContent = '用户名或密码错误';
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
